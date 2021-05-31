@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Jaz-02/CDMX010-md-links#readme",
   "dependencies": {
     "colors": "^1.4.0",
+    "node-fetch": "^2.6.1",
     "read-markdown": "^1.0.2"
   }
 }

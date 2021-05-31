@@ -1,15 +1,9 @@
-const { match } = require('assert');
 let fs = require('fs');
 require('colors');
 let path = require('path');
-// const { stringify } = require('querystring');
+const fetch = require('node-fetch');
 
-const links = () => {
-    collection = string
-    .replace(/[{()}]/g, '')
-    .match(/\bhttps?:\/\/\S+/gi);
-    return collection;
-}
+
 
 const ruter = path.resolve('./files');
 console.log(ruter.red);
@@ -38,6 +32,25 @@ const prueba =files.forEach(archivos => {
 
     }
 });
+console.log(prueba);
+
+
+const statusLinks = (promis) => {
+    Promise.all(promis)
+    .then((result) => {
+        result.map((resultt) => {
+            if (resultt.status === "OK") {
+                console.log()
+            }
+        })
+    })
+}
+
+const validateLink = (link) => 
+fetch(link)
+  .then((a) => {
+      return {href: link, status: "FAIL"}
+  })
 
 
 
